@@ -11,15 +11,24 @@ import java.util.List;
 import java.util.UUID;
 
 @Service
+//THE SERVICE CLASS
 public class patientService
 {
     private final PatientRepo patientRepo;
+    /*
+    PatientRepo is created as an object so each instance of the patientService class is able to use it
+     */
     @Autowired
     public patientService(PatientRepo patientRepo)
+    //Basic constructor that allows the PatientRepo class to be used
     {
         this.patientRepo = patientRepo;
     }
     public myPatient addPatient(myPatient patient)
+            /*
+            creates the first instance of the object myPatient. creates a random MRN that would be assigned to the
+            individual and saved.
+             */
     {
         patient.setMrn(Long.parseLong(UUID.randomUUID().toString()));
         return patientRepo.save(patient);
