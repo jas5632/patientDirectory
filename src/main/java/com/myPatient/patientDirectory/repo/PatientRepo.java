@@ -16,4 +16,5 @@ public interface PatientRepo extends JpaRepository<myPatient, Long>
     void deletePatientByMrn(long mrn);
 
     Optional<myPatient> findPatientByMrn(long mrn);
+    //called query methods, the optional variant is in case the method is passed an incorrect MRN and an exception is thrown
 }

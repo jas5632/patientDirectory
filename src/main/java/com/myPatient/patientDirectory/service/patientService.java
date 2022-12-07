@@ -13,10 +13,14 @@ import java.util.UUID;
 @Service
 //THE SERVICE CLASS
 public class patientService
+    /*
+    this is the service class that allows the database to be manipulated
+     */
 {
     private final PatientRepo patientRepo;
     /*
     PatientRepo is created as an object so each instance of the patientService class is able to use it
+    allows database to be accessed and modified
      */
     @Autowired
     public patientService(PatientRepo patientRepo)
@@ -36,6 +40,7 @@ public class patientService
     public List<myPatient> findAllPatients()
     {
         return patientRepo.findAll();
+        //
     }
     public myPatient updatePatient(myPatient patient)
     {
