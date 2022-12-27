@@ -28,6 +28,7 @@ public class patientService
     {
         this.patientRepo = patientRepo;
     }
+
     public myPatient addPatient(myPatient patient)
             /*
             creates the first instance of the object myPatient. creates a random MRN that would be assigned to the
