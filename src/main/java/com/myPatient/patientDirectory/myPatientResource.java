@@ -14,12 +14,13 @@ import java.util.List;
 public class myPatientResource
 {
     private final patientService patientService;
-    //just allows the service class to be used on the controller
-
+    /*just allows the service class to be used on the controller
+    the object is created for the
+    */
     public myPatientResource(patientService patientservice) {
         this.patientService = patientservice;
     }
-    @GetMapping
+    @GetMapping("/all")
     public ResponseEntity<List<myPatient>> getAllPatients()
     {
         List<myPatient> patients = patientService.findAllPatients();
